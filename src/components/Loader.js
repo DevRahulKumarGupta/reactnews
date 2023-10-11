@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Loader extends Component {
-  render() {
-    return (
-      <div className='d-flex justify-content-center align-items-center'>
-        <img src='/loader.gif' className="App-logo" alt="logo" style={{width:"50px"}} />
+export default function Loader() {
+  return (
+    <>
+       <div className='d-flex justify-content-center align-items-center'>
+        <img src='/loader.gif' className="App-logo" alt="logo" style={{width:"100px"}} />
       </div>
-    )
-  }
+    </>
+  )
 }

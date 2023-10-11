@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import NewsList from '../NewsList'
 
-export default class Sports extends Component {
-  render() {
-    return (
-      <div>
-        <NewsList chaneProgress={this.props.chaneProgress}  dataLimit={20} country="us" category="sports" />
-      </div>
-    )
-  }
+
+export default function Sports(props) {
+  return (
+    <div>
+      <NewsList chaneProgress={props.chaneProgress}  dataLimit={20} country="us" category="sports" />
+    </div>
+  )
 }
+
+

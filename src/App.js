@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+
 import LoadingBar from 'react-top-loading-bar'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -27,7 +28,7 @@ let chaneProgress =(progressVal)=>{
         height={3}
         progress={progress}
       />
-      <div>
+      <div style={{marginTop:"5rem"}}>
      
         <Routes>
           <Route path="/" element={<Home chaneProgress={chaneProgress}/>} />
@@ -40,6 +41,7 @@ let chaneProgress =(progressVal)=>{
 
         </Routes>
       </div>
+     
     </Router>
   );
 }
