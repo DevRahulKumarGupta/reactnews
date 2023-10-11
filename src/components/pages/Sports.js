@@ -5,7 +5,7 @@ export default class Sports extends Component {
   render() {
     return (
       <div>
-        <NewsList dataLimit={20} country="us" category="sports" />
+        <NewsList chaneProgress={this.props.chaneProgress}  dataLimit={20} country="us" category="sports" />
       </div>
     )
   }

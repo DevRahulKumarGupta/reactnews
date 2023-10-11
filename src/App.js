@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import Business from "./components/pages/Business";
 import Entertainment from "./components/pages/Entertainment";
@@ -10,20 +13,30 @@ import Sports from "./components/pages/Sports";
 import Technology from "./components/pages/Technology";
 
 function App() {
+  const [progress, setProgress] = useState(0)
+
+let chaneProgress =(progressVal)=>{
+  setProgress(progressVal)
+}
 
   return (
     <Router>
       <Navbar />
+      <LoadingBar
+        color='#f11946'
+        height={3}
+        progress={progress}
+      />
       <div>
      
         <Routes>
-          <Route path="/" element={<Home />} />
-  <Route path="/Business" element={<Business />}>Business</Route>
-  <Route path="/Entertainment" element={<Entertainment />}>Entertainment</Route>
-  <Route path="/Health" element={<Health />}>Health</Route>
-  <Route path="/Science" element={<Science />}>Science</Route>
-  <Route path="/Sports" element={<Sports />}>Sports</Route>
-  <Route path="/Technology" element={<Technology />}>Technology</Route>
+          <Route path="/" element={<Home chaneProgress={chaneProgress}/>} />
+  <Route path="/Business" element={<Business chaneProgress={chaneProgress}/>}>Business</Route>
+  <Route path="/Entertainment" element={<Entertainment chaneProgress={chaneProgress}/>}>Entertainment</Route>
+  <Route path="/Health" element={<Health chaneProgress={chaneProgress}/>}>Health</Route>
+  <Route path="/Science" element={<Science chaneProgress={chaneProgress}/>}>Science</Route>
+  <Route path="/Sports" element={<Sports chaneProgress={chaneProgress}/>}>Sports</Route>
+  <Route path="/Technology" element={<Technology chaneProgress={chaneProgress}/>}>Technology</Route>
 
         </Routes>
       </div>

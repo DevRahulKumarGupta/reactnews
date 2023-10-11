@@ -5,7 +5,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <NewsList dataLimit={20} country="us" category="general" />
+        <NewsList chaneProgress={this.props.chaneProgress} dataLimit={20} country="us" category="general" />
       </div>
     )
   }

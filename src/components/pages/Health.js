@@ -5,7 +5,7 @@ export default class Health extends Component {
   render() {
     return (
       <div>
-        <NewsList dataLimit={20} country="us" category="health" />
+        <NewsList chaneProgress={this.props.chaneProgress}  dataLimit={20} country="us" category="health" />
       </div>
     )
   }

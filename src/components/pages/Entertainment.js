@@ -5,7 +5,7 @@ export default class Entertainment extends Component {
   render() {
     return (
       <div>
-        <NewsList dataLimit={20} country="us" category="entertainment" />
+        <NewsList chaneProgress={this.props.chaneProgress}  dataLimit={20} country="us" category="entertainment" />
       </div>
     )
   }

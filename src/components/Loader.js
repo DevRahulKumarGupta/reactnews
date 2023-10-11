@@ -4,7 +4,7 @@ export default class Loader extends Component {
   render() {
     return (
       <div className='d-flex justify-content-center align-items-center'>
-        <img src='/loader.gif' className="App-logo" alt="logo" />
+        <img src='/loader.gif' className="App-logo" alt="logo" style={{width:"50px"}} />
       </div>
     )
   }

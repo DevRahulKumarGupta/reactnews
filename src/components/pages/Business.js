@@ -5,7 +5,7 @@ export default class Business extends Component {
   render() {
     return (
       <div>
-        <NewsList dataLimit={20} country="us" category="business" />
+        <NewsList chaneProgress={this.props.chaneProgress} dataLimit={20} country="us" category="business" />
       </div>
     )
   }

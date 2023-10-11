@@ -5,7 +5,7 @@ export default class Technology extends Component {
   render() {
     return (
       <div>
-        <NewsList dataLimit={20} country="us" category="technology" />
+        <NewsList chaneProgress={this.props.chaneProgress}  dataLimit={20} country="us" category="technology" />
       </div>
     )
   }
