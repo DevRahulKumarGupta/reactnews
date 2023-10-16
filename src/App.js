@@ -24,7 +24,7 @@ let chaneProgress =(progressVal)=>{
     <Router>
       <Navbar />
       <LoadingBar
-        color='#f11946'
+        color='linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'
         height={3}
         progress={progress}
       />
