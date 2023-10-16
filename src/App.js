@@ -15,7 +15,7 @@ import Technology from "./components/pages/Technology";
 
 function App() {
   const [progress, setProgress] = useState(0)
-
+//cl
 let chaneProgress =(progressVal)=>{
   setProgress(progressVal)
 }
